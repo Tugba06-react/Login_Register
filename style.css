@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* BODY OZELLESTIRME */
+/* rootda verilen özellikler body içerisinde de verilebilirdi. */
+:root{
+    --color-primary:rgb(50, 120, 70, .5);
+    --color-primary-dark:rgb(10, 70, 30);
+    --color-secondary:rgb(60, 60, 190);
+    --color-error: rgb(210,40,40);
+    --color-success: rgb(90,150,40);
+    --border-radius: 5px;
+}
+/* body içerinde ekranın 100%'ü kullanmak için vh birimi kullanılır. Body içerisinde bir araç için bütün ekranı kaplasın deseydik 100% kullanırdık. */
+body{
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)), url(/img.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    width: 400px;
+    max-height: 500px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px red;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    text-align: center;
+    /*  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% -50%);
+    */
+}
+
+/* Form title Alanı */
+
+.form_title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form_input--group{
+ margin-bottom: 1rem;
+}
+ /* box-sizing dışarıya taşmasını önler */
+.form_input{
+    width: 100%;
+    padding: .7rem
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    outline: none;
+    border: 2px solid #ddd;
+    background-color: #eee;
+    transition: background-color .3s border-color .3s;
+}
+.form_input:focus{
+   border-color: var(--color-primary);
+   background-color: white ;
+
+}
+
+.form_input-error-mesage{
+   margin-top: .5rem;
+   font size: .85rem;
+   color:var(--color-error);
+}
+.form_button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    margin-top: 1.2rem;
+}
+.form_button:hover{
+    background-color: var(--color-primary-dark);
+}
+
+.form_button:active{
+    transform: scale(0.98);
+}
+.form_link{
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form_link:hover{
+    text-decoration: underline;
+}
+
+.container, .form_input, .form_button{
+    font: 500 1rem 'Roboto', sans-serif;
+} 
